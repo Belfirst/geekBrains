@@ -4,25 +4,18 @@ public class FirstApp {
 
 
 
-        Animal dogBobic = new Animal();
+        Animal dogBob = new Animal();
         Cat dogB = new Cat("B");
         Cat catGolf = new Cat("Golf");
         Dog dogRex = new Dog("Rex");
 
-        dogB.run(200);
-        dogB.swim(20);
+        dogB.start(200,20, 500, 10);
+        dogBob.start(200,20,500,10);
+        catGolf.start(400,50,200,0);
+        dogRex.start(300,40,500,10);
 
-        dogBobic.run(200);
-        dogBobic.swim(20);
-
-        catGolf.run(400);
-        catGolf.swim(50);
-
-        dogRex.run(300);
-        dogRex.swim(40);
-
-        System.out.println("Созданных животных " + dogBobic.getCount());
-        System.out.println("Созданных котов " + catGolf.getCount());
-        System.out.println("Созданных собак " + dogRex.getCount());
+        System.out.println("Созданных животных " + Animal.getCount());
+        System.out.println("Созданных котов " + Cat.getCountCat());
+        System.out.println("Созданных собак " + Dog.getCountDog());
     }
 }

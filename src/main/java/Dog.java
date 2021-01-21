@@ -8,22 +8,18 @@ public class Dog extends Animal {
         countDog++;
     }
 
-    @Override
-    public int getCount() {
+    public static int getCountDog() {
         return countDog;
     }
 
     @Override
-    public void run(int distance){
-        if(distance <= 500) {
-            System.out.println(this.name + " пробежал(а)" + distance + "м");
+    public void start(int distanceRun, int distanceSwim, int maxDistanceRun, int maxDistanceSwim){
+        if(distanceRun <= maxDistanceRun) {
+            System.out.println(this.name + " пробежал(а)" + distanceRun + "м");
         } else System.out.println(this.name + " пробежал(а) 500 метров и устал(а)");
-    }
-
-    @Override
-    public void swim(int distance){
-        if(distance <= 10) {
-            System.out.println(this.name + " пробежал(а)" + distance + "м");
+        if(distanceSwim <= maxDistanceSwim) {
+            System.out.println(this.name + " пробежал(а)" + distanceSwim + "м");
         } else System.out.println(this.name + " проплыл(а) 10 метров и устал(а)");
     }
+
 }

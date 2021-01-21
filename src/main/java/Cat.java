@@ -7,20 +7,16 @@ public class Cat extends Animal {
         countCat++;
     }
 
-    @Override
-    public int getCount() {
+    public static int getCountCat() {
         return countCat;
     }
 
     @Override
-    public void run(int distance){
-        if(distance <= 200) {
-            System.out.println(this.name + " пробежал(а)" + distance + "м");
+    public void start(int distanceRun, int distanceSwim, int maxDistanceRun, int maxDistanceSwim){
+        if(distanceRun <= maxDistanceRun) {
+            System.out.println(this.name + " пробежал(а)" + distanceRun + "м");
         } else System.out.println(this.name + " пробежал(а) 200 метров и устал(а)");
-    }
-
-    @Override
-    public void swim(int distance){
         System.out.println("Кошки боятся воды!!!");
     }
+
 }

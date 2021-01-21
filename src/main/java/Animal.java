@@ -5,15 +5,12 @@ public class Animal {
         count++;
     }
 
-    public void run(int distance){
-        System.out.println("Неизвестное животное пробежало " + distance + "м");
+    public void start(int distanceRun, int distanceSwim, int maxDistanceRun, int maxDistanceSwim){
+        System.out.println("Неизвестное животное пробежало " + distanceRun + "м");
+        System.out.println("Неизвестное животное проплыло " + distanceSwim + "м");
     }
 
-    public void swim(int distance){
-        System.out.println("Неизвестное животное проплыло " + distance + "м");
-    }
-
-    public int getCount() {
+    public static int getCount() {
         return count;
     }
 }
